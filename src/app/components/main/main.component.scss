@@ -1,0 +1,63 @@
+.contenedor {
+    .portada {
+        height: 100vh;
+        background-color: #293241;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .tarjetaPerfil {
+            width: 80%;
+            height: 50%;
+            background-color: #efe5dc;
+            position: absolute;
+            top: 15%;
+            border-radius: 20px 150px 50px;
+            img {
+                border-radius: 50%;
+            }
+        }
+        .buttonSeccion {
+            width: 100%;
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .sobreMi {
+        height: 100vh;
+        background-color: #efe5dc;
+        position: relative;
+        .buttonSeccion {
+            width: 100%;
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .trabajos {
+        height: 100vh;
+        background-color: #293241;
+        position: relative;
+        .buttonSeccion {
+            width: 100%;
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .contacto {
+        height: 100vh;
+        background-color: #efe5dc;
+        position: relative;
+        .buttonSeccion {
+            width: 100%;
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

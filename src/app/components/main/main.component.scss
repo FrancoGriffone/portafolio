@@ -159,3 +159,161 @@
         }
     }
 }
+.navbar {
+    z-index: 1;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    background-color: #2d3250;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    width: 60%;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 15px;
+        li {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 300;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.contenedor {
+    .portada {
+        height: 100vh;
+        background-color: #ffffff;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .tarjetaPerfil {
+            position: relative;
+            width: 70%;
+            height: 40%;
+            background-color: #424769;
+            border-radius: 20px 150px 50px;
+            img {
+                position: absolute;
+                top: -50px;
+                left: 50px;
+                border-radius: 50%;
+                &:hover{
+                    transform: rotate(1080deg);
+                }
+            }
+            .nombre {
+                font-family: "Montserrat", sans-serif;
+                color: #ffffff;
+                font-size: xx-large;
+                font-weight: 300;
+                position: absolute;
+                top: 30px;
+                right: 150px;
+            }
+            .ocupacion {
+                font-family: "Montserrat", sans-serif;
+                color: #ffffff;
+                font-size: x-large;
+                font-weight: 200;
+                position: absolute;
+                top: 80px;
+                right: 110px;
+            }
+        }
+        .buttonSeccion {
+            width: 100%;
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .sobreMi {
+        height: 100vh;
+        background-color: #424769;
+        position: relative;
+        .buttonSeccion {
+            width: 100%;
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .trabajos {
+        height: 100vh;
+        background-color: #ffffff;
+        position: relative;
+        .buttonSeccion {
+            width: 100%;
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .contacto {
+        height: 100vh;
+        width: 100%;
+        background-color: #424769;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .fraseContacto {
+            height: 100%;
+            width: 70%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                margin: 0;
+            }
+            .fraseUno {
+                color: #ffffff;
+                font-family: "Montserrat", sans-serif;
+                font-size: xx-large;
+                font-weight: 200;
+            }
+            .fraseDos {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 2%;
+                color: #ffffff;
+                font-family: "Montserrat", sans-serif;
+                font-size: x-large;
+                font-weight: 500;
+            }
+            .buttonContacto {
+                display: flex;
+                justify-content: center;
+                margin-top: 5%;
+            }
+        }
+        .buttonSeccion {
+            width: 100%;
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .footer {
+        background-color: #2d3250;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        .nombreFooter {
+            font-family: "Montserrat", sans-serif;
+            font-size: x-large;
+            font-weight: 200;
+            color: #ffffff;
+        }
+    }
+}

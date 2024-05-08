@@ -46,6 +46,27 @@
         </div>
     </section>
     <section class="trabajos" id="trabajos">
+        <p-carousel 
+            [value]="proyectos" 
+            [numVisible]="1" 
+            [numScroll]="1" 
+            [circular]="true" >
+                <ng-template let-p pTemplate="item">
+                    <div class="border-1 surface-border border-round m-2 p-3">
+                        <div class="mb-3">
+                            <div class="relative mx-auto">
+                                <div class="img">
+                                    <img 
+                                    src="../../../assets/proyectos/{{p.imagen}}" 
+                                    [alt]="p.nombre" 
+                                    width="100%"
+                                    class="w-full border-round" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+        </p-carousel>
         <div class="buttonSeccion">
             <a href="#contacto">
                 <p-button 

@@ -1,105 +1,138 @@
-<div class="navbar">
-    <ul>
-        <li>
-            <a href="#portada">Inicio</a>
-        </li>
-        <li>
-            <a href="#sobreMi">Sobre mi</a>
-        </li>
-        <li>
-            <a href="#trabajos">Trabajos</a>
-        </li>
-        <li>
-            <a href="#contacto">Contacto</a>
-        </li>
-    </ul>
+<div class="tw-flex tw-justify-between tw-p-5">
+    <div>
+        <p class="tw-p-3 tw-text-negro tw-font-extrabold">FrancoGriffone/></p>
+    </div>
+    <div>
+        <ul class="tw-list-none tw-flex">
+            <li class="tw-ml-3 tw-p-3 tw-text-center"> 
+                <a class="tw-text-negro" href="#sobreMi">Sobre mi</a>
+            </li>
+            <li class="tw-ml-3 tw-p-3 tw-text-center">
+                <a class="tw-text-negro" href="#skills">Skills</a>
+            </li>
+            <li class="tw-ml-3 tw-p-3 tw-text-center tw-border-solid tw-border-2 tw-rounded-lg">
+                <a class="tw-text-negro" href="#contacto">¡Ponte en contacto!</a>
+            </li>
+        </ul>
+    </div>
 </div>
 
-<div class="contenedor">
-    <section class="portada" id="portada">
-        <div class="tarjetaPerfil">
-            <img src="../../../assets/perfil.jpeg" alt="foto de perfil" width="250px">
-            <p class="nombre">Franco Griffone</p>
-            <p class="ocupacion">Developer</p>
+<div class="contenedor tw-p-5 tw-flex tw-flex-col tw-items-center">
+    <section id="sobreMi" class="tw-flex tw-max-w-5xl">
+        <div class="descripcionPersonal tw-w-full">
+            <p class="tw-text-negro tw-font-extrabold tw-text-5xl tw-tracking-wider">Despeguemos juntos a una aventura increíble</p>
+            <p class="tw-text-negro tw-text-lg">Bienvenido a mi portafolio. Soy un developer argentino, con estudios en derecho también. Me apasiona todo lo relativo a la tecnología, y es un sueño poder hoy vivir de esto. ¡Entra en contacto conmigo para conocerme más!</p>
         </div>
-        <div class="buttonSeccion">
-            <a href="#sobreMi">
-                <p-button 
-                    icon="pi pi-angle-down" 
-                    [rounded]="true" 
-                    [text]="true"
-                    [style]="{color: '#676f9d'}">
-                </p-button>
-            </a>
+        <div class="fotoPerfil tw-w-full tw-flex tw-items-center">
+            <img class="tw-rounded-full tw-w-4/5" src="../../../assets/perfil.jpeg" alt="foto de perfil">
         </div>
     </section>
-    <section class="sobreMi" id="sobreMi">
-        <div class="buttonSeccion">
-            <a href="#trabajos">
-                <p-button 
-                    icon="pi pi-angle-down" 
-                    [rounded]="true" 
-                    [text]="true"
-                    [style]="{color: '#f9b17a'}">
-                </p-button>
-            </a>
+    <section class="tw-flex tw-flex-col tw-max-w-5xl" id="skills">
+        <div class="carrera tw-px-5 tw-py-20 tw-flex">
+            <div class="tw-flex tw-items-center">
+                <p class="tw-text-negro tw-font-extrabold tw-text-2xl tw-p-1 tw-bg-verde tw-mr-2">Estudios</p>
+            </div>
+            <div class="tw-flex tw-items-center">
+                <p class="tw-text-negro tw-text-sm">Primero conseguí titularme como Abogado estudiando en la Universidad Nacional de Río Cuarto, y luego, al tiempo que trabajaba, me capacité como Developer full stacks de manera online.</p>
+            </div>
         </div>
-    </section>
-    <section class="trabajos" id="trabajos">
-        <p-carousel 
-            [value]="proyectos" 
-            [numVisible]="1" 
-            [numScroll]="1" 
-            [circular]="true" >
-                <ng-template let-p pTemplate="item">
-                    <div class="border-1 surface-border border-round m-2 p-3">
-                        <div class="mb-3">
-                            <div class="relative mx-auto">
-                                <div class="img">
-                                    <img 
-                                    src="../../../assets/proyectos/{{p.imagen}}" 
-                                    [alt]="p.nombre" 
-                                    width="100%"
-                                    class="w-full border-round" />
-                                </div>
-                            </div>
-                        </div>
+        <div class="skills tw-flex tw-flex-wrap tw-items-center tw-justify-center">
+            <div class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
+                <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
+                    <div class="tw-flex tw-flex-col tw-items-start">
+                        <p class="tw-bg-verde tw-mb-0 tw-font-semibold tw-text-xl">Developer</p>
+                        <p class="tw-bg-verde tw-mt-0 tw-font-semibold tw-text-xl">full stacks</p>
                     </div>
-                </ng-template>
-        </p-carousel>
-        <div class="buttonSeccion">
-            <a href="#contacto">
-                <p-button 
-                    icon="pi pi-angle-down" 
-                    [rounded]="true" 
-                    [text]="true"
-                    [style]="{color: '#676f9d'}">
-                </p-button>
-            </a>
+                    <p>Saber más</p>
+                </div>
+                <div class="tw-w-full">
+                    ICONO
+                </div>
+            </div>
+            <div class="tw-flex tw-border-solid tw-border-2 tw-bg-negro tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
+                <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
+                    <div class="tw-flex tw-flex-col tw-items-start">
+                        <p class="tw-bg-white tw-mb-0 tw-font-semibold tw-text-xl">Angular/Typescript</p>
+                        <p class="tw-bg-white tw-mt-0 tw-font-semibold tw-text-xl">mi día a día</p>
+                    </div>
+                    <p class="tw-text-white">Saber más</p>
+                </div>
+                <div class="tw-w-full">
+                    ICONO
+                </div>
+            </div>
+            <div class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
+                <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
+                    <div class="tw-flex tw-flex-col tw-items-start">
+                        <p class="tw-bg-verde tw-mb-0 tw-font-semibold tw-text-xl">C#, SQL,</p>
+                        <p class="tw-bg-verde tw-mt-0 tw-font-semibold tw-text-xl">SQL Server y más</p>
+                    </div>
+                    <p >Saber más</p>
+                </div>
+                <div class="tw-w-full">
+                    ICONO
+                </div>
+            </div>
+            <div class="tw-flex tw-border-solid tw-border-2 tw-bg-negro tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
+                <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
+                    <div class="tw-flex tw-flex-col tw-items-start">
+                        <p class="tw-bg-white tw-mb-0 tw-font-semibold tw-text-xl">Soft-skills</p>
+                    </div>
+                    <p class="tw-text-white">Saber más</p>
+                </div>
+                <div class="tw-w-full">
+                    ICONO
+                </div>
+            </div>
+        </div>
+        <div class="invitacion" id="contacto">
+            <div class="tw-bg-gris tw-flex tw-p-8 tw-mt-20 tw-rounded-3xl">
+                <div class="tw-w-full">
+                    <p class="tw-text-negro tw-font-extrabold tw-tracking-wider">Hagamos que las cosas pasen</p>
+                    <p class="tw-text-negro tw-text-sm">Si te interesó el contenido de la web y crees que mi perfil puede encajar con tu idea, no dudes en entrar en contacto (siempre es bueno tener una charla amena)</p>
+                    <p-button 
+                        label="Quiero contactarme" 
+                        [style]="{color: '#ffffff', background: '#26242d', border: '1px solid #26242d'}">
+                    </p-button>
+                </div>
+                <div class="tw-w-full tw-flex tw-items-center tw-justify-center">
+                    ICONO
+                </div>
+            </div>
         </div>
     </section>
-    <section class="contacto" id="contacto">
-        <div class="fraseContacto">
-            <div class="fraseUno">
-                <p>
-                    ¿Te gustó el contenido de la página?
-                </p>
+    <section class="redes tw-max-w-5xl">
+        <div class="polivalencia tw-px-5 tw-py-20 tw-flex">
+            <div class="tw-flex tw-items-center">
+                <p class="tw-text-negro tw-font-extrabold tw-text-xl tw-p-1 tw-bg-verde tw-mr-2">Polivalencia</p>
             </div>
-            <div class="fraseDos">
-                <p>
-                    ¡Ponte en contacto conmigo y solicita mi currículum!
-                </p>
+            <div class="tw-flex tw-items-center">
+                <p class="tw-text-negro tw-text-sm">Si bien tengo una clara inclinación por el diseño, me siento muy agusto con tareas diferentes como el backend (un poco por el mismo amor a lo tecnológico).</p>
             </div>
-            <div class="buttonContacto">
-                <p-button 
-                    label="Quiero contactarme" 
-                    icon="pi pi-envelope"
-                    [style]="{color: '#676f9d', background: '#f9b17a', border: '1px solid #f9b17a'}">
-                </p-button>
+        </div>
+        <div class="linksRedes tw-p-8 tw-bg-negro tw-rounded-3xl lg:tw-flex">
+            <div class="tw-p-5 tw-w-full tw-flex tw-flex-col tw-justify-between">
+                <p class="tw-text-white tw-text-sm">Facebook funciona casi como un documento de identidad.</p>
+                <p class="tw-text-verde tw-text-sm">Link a facebook</p>
+            </div>
+            <hr>
+            <div class="tw-p-5 tw-w-full tw-flex tw-flex-col tw-justify-between">
+                <p class="tw-text-white tw-text-sm">Es mi red social por excelencia. Soy más de mirar que de publicar.</p>
+                <p class="tw-text-verde tw-text-sm">Link a instagram</p>
+            </div>
+            <hr>
+            <div class="tw-p-5 tw-w-full tw-flex tw-flex-col tw-justify-between">
+                <p class="tw-text-white tw-text-sm">Este es obligatorio, con datos actualizados siempre.</p>
+                <p class="tw-text-verde tw-text-sm">Link a linkedin</p>
+            </div>
+            <hr>
+            <div class="tw-p-5 tw-w-full tw-flex tw-flex-col tw-justify-between">
+                <p class="tw-text-white tw-text-sm">En Github encontrarán los proyectos en los que estoy trabajando</p>
+                <p class="tw-text-verde tw-text-sm">Link a github</p>
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="nombreFooter">
             <p>Franco Griffone</p>
         </div>
@@ -137,5 +170,5 @@
                 </p-button>
             </a>
         </div>
-    </footer>
+    </footer> -->
 </div>

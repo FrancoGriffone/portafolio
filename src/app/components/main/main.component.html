@@ -1,10 +1,10 @@
-<div class="tw-flex tw-justify-between tw-p-5">
-    <div>
+<div class="tw-flex tw-justify-center md:tw-justify-between tw-p-5">
+    <div class="tw-hidden md:tw-block">
         <p class="tw-p-3 tw-text-negro tw-font-extrabold">FrancoGriffone/></p>
     </div>
     <div>
-        <ul class="tw-list-none tw-flex">
-            <li class="tw-ml-3 tw-p-3 tw-text-center"> 
+        <ul class="tw-list-none tw-flex tw-p-0">
+            <li class="tw-ml-3 tw-p-3 tw-text-center tw-hidden sm:tw-block"> 
                 <a class="tw-text-negro" href="#sobreMi">Sobre mi</a>
             </li>
             <li class="tw-ml-3 tw-p-3 tw-text-center">
@@ -18,17 +18,18 @@
 </div>
 
 <div class="contenedor tw-p-5 tw-flex tw-flex-col tw-items-center">
-    <section id="sobreMi" class="tw-flex tw-max-w-5xl">
+    <section id="sobreMi" class="tw-flex tw-flex-col md:tw-flex-row tw-max-w-5xl">
         <div class="descripcionPersonal tw-w-full">
-            <p class="tw-text-negro tw-font-extrabold tw-text-5xl tw-tracking-wider">Despeguemos juntos a una aventura increíble</p>
+            <p class="tw-text-negro tw-font-extrabold tw-text-3xl sm:tw-text-5xl sm:tw-tracking-wider">Despeguemos juntos a una aventura increíble</p>
             <p class="tw-text-negro tw-text-lg">Bienvenido a mi portafolio. Soy un developer argentino, con estudios en derecho también. Me apasiona todo lo relativo a la tecnología, y es un sueño poder hoy vivir de esto. ¡Entra en contacto conmigo para conocerme más!</p>
         </div>
-        <div class="fotoPerfil tw-w-full tw-flex tw-items-center">
+        <div class="fotoPerfil tw-w-full tw-flex tw-flex-col tw-items-center tw-justify-center">
+            <p class="tw-p-3 tw-block md:tw-hidden tw-text-negro tw-font-extrabold">FrancoGriffone/></p>
             <img class="tw-rounded-full tw-w-4/5" src="../../../assets/perfil.jpeg" alt="foto de perfil">
         </div>
     </section>
     <section class="tw-flex tw-flex-col tw-max-w-5xl" id="skills">
-        <div class="carrera tw-px-5 tw-py-20 tw-flex">
+        <div class="carrera tw-px-5 tw-py-20 tw-flex tw-flex-col sm:tw-flex-row">
             <div class="tw-flex tw-items-center">
                 <p class="tw-text-negro tw-font-extrabold tw-text-2xl tw-p-1 tw-bg-verde tw-mr-2">Estudios</p>
             </div>
@@ -45,8 +46,10 @@
                     </div>
                     <p>Saber más</p>
                 </div>
-                <div class="tw-w-full">
-                    ICONO
+                <div class="tw-w-full tw-hidden sm:tw-block">
+                    <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
+                        <img class="tw-w-4/5" src="../../../assets/designer.png" alt="foto de diseño">
+                    </div>
                 </div>
             </div>
             <div class="tw-flex tw-border-solid tw-border-2 tw-bg-negro tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
@@ -57,37 +60,44 @@
                     </div>
                     <p class="tw-text-white">Saber más</p>
                 </div>
-                <div class="tw-w-full">
-                    ICONO
-                </div>
-            </div>
-            <div class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
-                <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
-                    <div class="tw-flex tw-flex-col tw-items-start">
-                        <p class="tw-bg-verde tw-mb-0 tw-font-semibold tw-text-xl">C#, SQL,</p>
-                        <p class="tw-bg-verde tw-mt-0 tw-font-semibold tw-text-xl">SQL Server y más</p>
+                <div class="tw-w-full tw-hidden sm:tw-block">
+                    <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
+                        <img class="tw-bg-white tw-rounded-full tw-w-4/5" src="../../../assets/social.png" alt="foto frontend">
                     </div>
-                    <p >Saber más</p>
-                </div>
-                <div class="tw-w-full">
-                    ICONO
                 </div>
             </div>
             <div class="tw-flex tw-border-solid tw-border-2 tw-bg-negro tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
                 <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
                     <div class="tw-flex tw-flex-col tw-items-start">
-                        <p class="tw-bg-white tw-mb-0 tw-font-semibold tw-text-xl">Soft-skills</p>
+                        <p class="tw-bg-white tw-mb-0 tw-font-semibold tw-text-xl">C#, SQL,</p>
+                        <p class="tw-bg-white tw-mt-0 tw-font-semibold tw-text-xl">SQL Server y más</p>
                     </div>
                     <p class="tw-text-white">Saber más</p>
                 </div>
-                <div class="tw-w-full">
-                    ICONO
+                <div class="tw-w-full tw-hidden sm:tw-block">
+                    <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
+                        <img class="tw-bg-white tw-rounded-full tw-w-4/5" src="../../../assets/dataSecurity.png" alt="foto backend">
+                    </div>
+                </div>
+            </div>
+            <div class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
+                <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
+                    <div class="tw-flex tw-flex-col tw-items-start">
+                        <p class="tw-bg-verde tw-mb-0 tw-font-semibold tw-text-xl">Soft-skills</p>
+                        <p class="tw-bg-verde tw-mt-0 tw-font-semibold tw-text-xl">Adquiridas</p>
+                    </div>
+                    <p>Saber más</p>
+                </div>
+                <div class="tw-w-full tw-hidden sm:tw-block">
+                    <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
+                        <img class="tw-w-4/5" src="../../../assets/team.png" alt="foto de trabajo en equipo">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="invitacion" id="contacto">
             <div class="tw-bg-gris tw-flex tw-p-8 tw-mt-20 tw-rounded-3xl">
-                <div class="tw-w-full">
+                <div class="tw-w-full tw-flex tw-flex-col tw-justify-center">
                     <p class="tw-text-negro tw-font-extrabold tw-tracking-wider">Hagamos que las cosas pasen</p>
                     <p class="tw-text-negro tw-text-sm">Si te interesó el contenido de la web y crees que mi perfil puede encajar con tu idea, no dudes en entrar en contacto (siempre es bueno tener una charla amena)</p>
                     <p-button 
@@ -95,14 +105,16 @@
                         [style]="{color: '#ffffff', background: '#26242d', border: '1px solid #26242d'}">
                     </p-button>
                 </div>
-                <div class="tw-w-full tw-flex tw-items-center tw-justify-center">
-                    ICONO
+                <div class="tw-w-full tw-hidden sm:tw-block">
+                    <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
+                        <img class="tw-rounded-full tw-w-4/5" src="../../../assets/social.png" alt="foto de referencia social">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="redes tw-max-w-5xl">
-        <div class="polivalencia tw-px-5 tw-py-20 tw-flex">
+        <div class="polivalencia tw-px-5 tw-py-20 tw-flex tw-flex-col sm:tw-flex-row">
             <div class="tw-flex tw-items-center">
                 <p class="tw-text-negro tw-font-extrabold tw-text-xl tw-p-1 tw-bg-verde tw-mr-2">Polivalencia</p>
             </div>

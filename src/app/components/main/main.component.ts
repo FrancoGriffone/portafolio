@@ -3,7 +3,6 @@ import { Title } from '@angular/platform-browser';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 
-
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -15,9 +14,4 @@ import { CarouselModule } from 'primeng/carousel';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-
-  constructor(private titleService: Title){
-    //CAMBIO DE TITULO
-    this.titleService.setTitle("FrancoGriffone/>");
-  }
 }

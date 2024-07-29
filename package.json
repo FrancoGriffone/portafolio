@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:portafolio": "node dist/portafolio/server/server.mjs",
     "predeploy": "ng build --configuration production --base-href /portafolio/",
-    "deploy": "gh-pages -d dist/portafolio -r https://github.com/FrancoGriffone/portafolio.git"
+    "deploy": "gh-pages -d dist/portafolio/browser -r https://github.com/FrancoGriffone/portafolio.git"
   },
   "private": true,
   "dependencies": {

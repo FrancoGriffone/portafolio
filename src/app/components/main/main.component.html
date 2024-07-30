@@ -1,3 +1,26 @@
+<!-- DIALOGS -->
+<p-dialog 
+    header="Edit Profile" 
+    [modal]="true" 
+    [(visible)]="visible"
+    [style]="{ width: '25rem' }">
+    <div class="tw-bg-white">
+        <span class="p-text-secondary block mb-5">Update your information.</span>
+        <div class="flex align-items-center gap-3 mb-3">
+            <label for="username" class="font-semibold w-6rem">Username</label>
+            <input pInputText id="username" class="flex-auto" autocomplete="off" />
+        </div>
+        <div class="flex align-items-center gap-3 mb-5">
+            <label for="email" class="font-semibold w-6rem">Email</label>
+            <input pInputText id="email" class="flex-auto" autocomplete="off" />
+        </div>
+        <div class="flex justify-content-end gap-2">
+            <p-button label="Cancel" severity="secondary" (onClick)="visible = false" />
+            <p-button label="Save" (onClick)="visible = false" />
+        </div>
+    </div>
+</p-dialog>
+
 <div class="tw-flex tw-justify-center md:tw-justify-between tw-p-5">
     <div class="tw-hidden md:tw-block">
         <p class="tw-p-3 tw-text-negro tw-font-extrabold">FrancoGriffone/></p>
@@ -5,13 +28,13 @@
     <div>
         <ul class="tw-list-none tw-flex tw-p-0">
             <li class="tw-ml-3 tw-p-3 tw-text-center tw-hidden sm:tw-block"> 
-                <a class="tw-text-negro" href="#sobreMi">Sobre mi</a>
+                <a class="tw-text-negro tw-no-underline hover:tw-underline tw-cursor-pointer" (click)="onScroll('sobreMi')">Sobre mi</a>
             </li>
             <li class="tw-ml-3 tw-p-3 tw-text-center">
-                <a class="tw-text-negro" href="#skills">Skills</a>
+                <a class="tw-text-negro tw-no-underline hover:tw-underline tw-cursor-pointer" (click)="onScroll('skills')">Skills</a>
             </li>
-            <li class="tw-ml-3 tw-p-3 tw-text-center tw-border-solid tw-border-2 tw-rounded-lg">
-                <a class="tw-text-negro" href="#contacto">¡Ponte en contacto!</a>
+            <li (click)="showDialog('center', 'contacto')" class="tw-ml-3 tw-p-3 tw-text-center tw-border-solid tw-border-2 tw-rounded-lg tw-transition-all tw-ease-linear hover:tw-cursor-pointer hover:tw-bg-negro tw-group">
+                <a class="tw-text-negro tw-no-underline group-hover:tw-text-white" (click)="onScroll('contacto')">¡Ponte en contacto!</a>
             </li>
         </ul>
     </div>
@@ -25,7 +48,7 @@
         </div>
         <div class="fotoPerfil tw-w-full tw-flex tw-flex-col tw-items-center tw-justify-center">
             <p class="tw-p-3 tw-block md:tw-hidden tw-text-negro tw-font-extrabold">FrancoGriffone/></p>
-            <img class="tw-rounded-full tw-w-4/5" src="../../../assets/perfil.jpeg" alt="foto de perfil">
+            <img class="tw-rounded-full tw-w-4/5" src="assets/perfil.jpeg" alt="foto de perfil">
         </div>
     </section>
     <section class="tw-flex tw-flex-col tw-max-w-5xl" id="skills">
@@ -38,59 +61,79 @@
             </div>
         </div>
         <div class="skills tw-flex tw-flex-wrap tw-items-center tw-justify-center">
-            <div class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
+            <div (click)="showDialog('right', 'developer')" class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-rounded-3xl tw-p-8 tw-h-56 tw-w-full tw-max-w-md tw-m-5 tw-transition-all tw-ease-linear hover:tw-border-2 hover:tw-cursor-pointer">
                 <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
                     <div class="tw-flex tw-flex-col tw-items-start">
                         <p class="tw-bg-verde tw-mb-0 tw-font-semibold tw-text-xl">Developer</p>
                         <p class="tw-bg-verde tw-mt-0 tw-font-semibold tw-text-xl">full stacks</p>
                     </div>
-                    <p>Saber más</p>
+                    <div class="tw-flex tw-items-center">
+                        <div class="tw-flex tw-items-center hover:tw-cursor-pointer tw-group">
+                            <p class="group-hover:tw-underline tw-m-0">Saber más</p>
+                            <i class="pi pi-arrow-up-right tw-ml-2"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="tw-w-full tw-hidden sm:tw-block">
                     <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
-                        <img class="tw-w-4/5" src="../../../assets/designer.png" alt="foto de diseño">
+                        <img class="tw-w-4/5" src="assets/designer.png" alt="foto de diseño">
                     </div>
                 </div>
             </div>
-            <div class="tw-flex tw-border-solid tw-border-2 tw-bg-negro tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
+            <div (click)="showDialog('right', 'frontEnd')" class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-border-gris tw-rounded-3xl tw-bg-negro tw-p-8 tw-h-56 tw-w-full tw-max-w-md tw-m-5 tw-transition-all tw-ease-linear hover:tw-border-2 hover:tw-cursor-pointer">
                 <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
                     <div class="tw-flex tw-flex-col tw-items-start">
                         <p class="tw-bg-white tw-mb-0 tw-font-semibold tw-text-xl">Angular/Typescript</p>
                         <p class="tw-bg-white tw-mt-0 tw-font-semibold tw-text-xl">mi día a día</p>
                     </div>
-                    <p class="tw-text-white">Saber más</p>
+                    <div class="tw-flex tw-items-center">
+                        <div class="tw-flex tw-items-center hover:tw-cursor-pointer tw-group">
+                            <p class="tw-text-white group-hover:tw-underline tw-m-0">Saber más</p>
+                            <i class="pi pi-arrow-up-right tw-text-white tw-ml-2"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="tw-w-full tw-hidden sm:tw-block">
                     <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
-                        <img class="tw-bg-white tw-rounded-full tw-w-4/5" src="../../../assets/social.png" alt="foto frontend">
+                        <img class="tw-bg-white tw-rounded-full tw-w-4/5" src="assets/secureLogin.png" alt="foto frontend">
                     </div>
                 </div>
             </div>
-            <div class="tw-flex tw-border-solid tw-border-2 tw-bg-negro tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
+            <div (click)="showDialog('right', 'backEnd')" class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-border-gris tw-rounded-3xl tw-bg-negro tw-p-8 tw-h-56 tw-w-full tw-max-w-md tw-m-5 tw-transition-all tw-ease-linear hover:tw-border-2 hover:tw-cursor-pointer">
                 <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
                     <div class="tw-flex tw-flex-col tw-items-start">
                         <p class="tw-bg-white tw-mb-0 tw-font-semibold tw-text-xl">C#, SQL,</p>
                         <p class="tw-bg-white tw-mt-0 tw-font-semibold tw-text-xl">SQL Server y más</p>
                     </div>
-                    <p class="tw-text-white">Saber más</p>
+                    <div class="tw-flex tw-items-center">
+                        <div class="tw-flex tw-items-center hover:tw-cursor-pointer tw-group">
+                            <p class="tw-text-white group-hover:tw-underline tw-m-0">Saber más</p>
+                            <i class="pi pi-arrow-up-right tw-text-white tw-ml-2"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="tw-w-full tw-hidden sm:tw-block">
                     <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
-                        <img class="tw-bg-white tw-rounded-full tw-w-4/5" src="../../../assets/dataSecurity.png" alt="foto backend">
+                        <img class="tw-bg-white tw-rounded-full tw-w-4/5" src="assets/dataSecurity.png" alt="foto backend">
                     </div>
                 </div>
             </div>
-            <div class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-rounded-3xl tw-p-8 tw-h-64 tw-w-full tw-max-w-md tw-m-5">
+            <div (click)="showDialog('right', 'softSkills')" class="tw-flex tw-border-solid tw-border-2 tw-border-b-8 tw-rounded-3xl tw-p-8 tw-h-56 tw-w-full tw-max-w-md tw-m-5 tw-transition-all tw-ease-linear hover:tw-border-2 hover:tw-cursor-pointer">
                 <div class="tw-w-full tw-flex tw-flex-col tw-justify-between">
                     <div class="tw-flex tw-flex-col tw-items-start">
                         <p class="tw-bg-verde tw-mb-0 tw-font-semibold tw-text-xl">Soft-skills</p>
                         <p class="tw-bg-verde tw-mt-0 tw-font-semibold tw-text-xl">Adquiridas</p>
                     </div>
-                    <p>Saber más</p>
+                    <div class="tw-flex tw-items-center">
+                        <div class="tw-flex tw-items-center hover:tw-cursor-pointer tw-group">
+                            <p class="group-hover:tw-underline tw-m-0">Saber más</p>
+                            <i class="pi pi-arrow-up-right tw-ml-2"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="tw-w-full tw-hidden sm:tw-block">
                     <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
-                        <img class="tw-w-4/5" src="../../../assets/team.png" alt="foto de trabajo en equipo">
+                        <img class="tw-w-4/5" src="assets/team.png" alt="foto de trabajo en equipo">
                     </div>
                 </div>
             </div>
@@ -102,12 +145,13 @@
                     <p class="tw-text-negro tw-text-sm">Si te interesó el contenido de la web y crees que mi perfil puede encajar con tu idea, no dudes en entrar en contacto (siempre es bueno tener una charla amena)</p>
                     <p-button 
                         label="Quiero contactarme" 
-                        [style]="{color: '#ffffff', background: '#26242d', border: '1px solid #26242d'}">
+                        [style]="{color: '#ffffff', background: '#26242d', border: '1px solid #26242d'}"
+                        (onClick)="showDialog('center', 'contacto')">
                     </p-button>
                 </div>
                 <div class="tw-w-full tw-hidden sm:tw-block">
                     <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
-                        <img class="tw-rounded-full tw-w-4/5" src="../../../assets/social.png" alt="foto de referencia social">
+                        <img class="tw-rounded-full tw-w-4/5" src="assets/social.png" alt="foto de referencia social">
                     </div>
                 </div>
             </div>
@@ -125,22 +169,42 @@
         <div class="linksRedes tw-p-8 tw-bg-negro tw-rounded-3xl lg:tw-flex">
             <div class="tw-p-5 tw-w-full tw-flex tw-flex-col tw-justify-between">
                 <p class="tw-text-white tw-text-sm">Facebook funciona casi como un documento de identidad.</p>
-                <p class="tw-text-verde tw-text-sm">Link a facebook</p>
+                <div class="tw-flex tw-items-center">
+                    <div class="tw-flex tw-items-center hover:tw-cursor-pointer tw-group">
+                        <p class="tw-text-verde tw-text-sm group-hover:tw-underline tw-m-0">Link a facebook</p>
+                        <i class="pi pi-arrow-up-right tw-text-verde tw-ml-2"></i>
+                    </div>
+                </div>
             </div>
             <hr>
             <div class="tw-p-5 tw-w-full tw-flex tw-flex-col tw-justify-between">
                 <p class="tw-text-white tw-text-sm">Es mi red social por excelencia. Soy más de mirar que de publicar.</p>
-                <p class="tw-text-verde tw-text-sm">Link a instagram</p>
+                <div class="tw-flex tw-items-center">
+                    <div class="tw-flex tw-items-center hover:tw-cursor-pointer tw-group">
+                        <p class="tw-text-verde tw-text-sm group-hover:tw-underline tw-m-0">Link a instagram</p>
+                        <i class="pi pi-arrow-up-right tw-text-verde tw-ml-2"></i>
+                    </div>
+                </div>
             </div>
             <hr>
             <div class="tw-p-5 tw-w-full tw-flex tw-flex-col tw-justify-between">
                 <p class="tw-text-white tw-text-sm">Este es obligatorio, con datos actualizados siempre.</p>
-                <p class="tw-text-verde tw-text-sm">Link a linkedin</p>
+                <div class="tw-flex tw-items-center">
+                    <div class="tw-flex tw-items-center hover:tw-cursor-pointer tw-group">
+                        <p class="tw-text-verde tw-text-sm group-hover:tw-underline tw-m-0">Link a linkedin</p>
+                        <i class="pi pi-arrow-up-right tw-text-verde tw-ml-2"></i>
+                    </div>
+                </div>
             </div>
             <hr>
             <div class="tw-p-5 tw-w-full tw-flex tw-flex-col tw-justify-between">
                 <p class="tw-text-white tw-text-sm">En Github encontrarán los proyectos en los que estoy trabajando</p>
-                <p class="tw-text-verde tw-text-sm">Link a github</p>
+                <div class="tw-flex tw-items-center">
+                    <div class="tw-flex tw-items-center hover:tw-cursor-pointer tw-group">
+                        <p class="tw-text-verde tw-text-sm group-hover:tw-underline tw-m-0">Link a github</p>
+                        <i class="pi pi-arrow-up-right tw-text-verde tw-ml-2"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

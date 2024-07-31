@@ -1,0 +1,15 @@
+<div class="tw-p-5">
+    @if(data == 'developer'){
+        <p class="tw-font-extrabold tw-text-4xl tw-tracking-wider">Perfil full stacks</p>
+        <p>Las capacitaciones que desarrollé durante mi formación estuvieron orientadas para equilibrar tanto el Front-end como el Back-end, stack MERN (MongoDB, Express.js, React, Node.js). En el medio realizamos capacitaciones sobre otras tecnologías como Bootstrap, Firebase, SQL y sus similares, entre otros.</p>
+    } @else if(data == 'frontEnd'){
+        <p class="tw-font-extrabold tw-text-4xl tw-tracking-wider">En mi día a día, Angular como eje</p>
+        <p>En mi experiencia laboral, me tocó capacitarme sobre Angular como nuevo framework de trabajo, al igual Typescript (dado que React lo habíamos estudiado utilizando JS). Me adapté al desafío y hoy disfruto el día a día con este entorno de desarrollo, intentando mejorar, mantenerme actualizado, e implementando las mejores prácticas que voy adquiriendo en el camino.</p>
+    } @else if(data == 'backEnd'){
+        <p class="tw-font-extrabold tw-text-4xl tw-tracking-wider">Desarrollo Backend</p>
+        <p class="tw-text-l">Al igual que con Angular, cuando fui adquiriendo mayores responsabilidades en mi puesto de trabajo comencé a desarrollar API's tanto para el uso de mis propias aplicaciones como para dar soporte a terceros. En el camino, tuve que volver a encontrarme con SQL de la mano de SQL Server, y realizando dichas API's con un nuevo lenguaje como lo es C#. Comprender la estructura, el tipado y demás característecas intrínsecas del propio lenguaje me permitió mejorar en otros ámbitos de otros lenguajes.</p>
+    } @else if(data == 'softSkills'){
+        <p class="tw-font-extrabold tw-text-4xl tw-tracking-wider">No todo es código</p>
+        <p class="tw-text-l">La empresa que confío en mi antes de colocarme como developer, me tuvo como responsable de la atención al cliente post-venta. Siendo un local comercial de buena envergadura, tuve el desafío de conectar con los clientes en situaciones donde ellos tenían problemas con productos, tarjetas, etc. Esto puso a prueba muchas cualidades y permitió pullir/desarrollar aptitudes que hoy me faciltan conectar con las personas, ya sean clientes o compañeros. A su vez, en este rol de responsable, tuve a cargo los lineamientos de la atención post-venta, junto a la capacitación y cuidado de compañeros a mi cargo.</p>
+    }
+</div>
